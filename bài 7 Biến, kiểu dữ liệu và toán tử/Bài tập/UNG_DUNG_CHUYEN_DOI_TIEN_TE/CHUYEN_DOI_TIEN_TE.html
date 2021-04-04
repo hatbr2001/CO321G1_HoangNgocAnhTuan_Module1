@@ -51,9 +51,9 @@
 </form>
 <script>
     function convert() {
-        var amount = document.getElementById('amount').value;
-        var fromCurrecy = document.getElementById('fromCurrecy').value;
-        var toCurrecy = document.getElementById('toCurrecy').value;
+        var amount = document.forms["formConvert"]["amount"].value;
+        var fromCurrecy = document.forms["formConvert"]["fromCurrecy"].value;
+        var toCurrecy = document.forms["formConvert"]["toCurrecy"].value;
         var result = amount*0.000043;
         document.getElementById('result').innerHTML = "Result: "+result;
     }
