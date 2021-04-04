@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Ứng dụng máy tính</title>
 </head>
 <body>
-$END$
+<h2>Caculator</h2>
+<form name="formCaculator">
+    <div style="margin-bottom: 10px">
+        <input type="text" name="number_first">
+        <input type="text" name="number_second">
+    </div>
+    <div>
+        <input type="button" value="Addition(+)" onclick="addition()">
+        <input type="button" value="Subtraction(-)" onclick="subtraction()">
+        <input type="button" value="Multiplication(X)" onclick="multiplication()">
+        <input type="button" value="Division(/)" onclick="division()">
+    </div>
+    <div id="result"></div>
+</form>
+<script>
+    function addition() {
+        var number_first = parseInt(document.forms["formCaculator"]["number_first"].value);
+        var number_second = parseInt(document.forms["formCaculator"]["number_second"].value);
+        var result = number_first + number_second;
+        document.getElementById('result').innerHTML = "Result Addition: "+result;
+    }
+    function subtraction() {
+        var number_first = parseInt(document.forms["formCaculator"]["number_first"].value);
+        var number_second = parseInt(document.forms["formCaculator"]["number_second"].value);
+        var result = number_first - number_second;
+        document.getElementById('result').innerHTML = "Result Addition: "+result;
+    }
+    function multiplication() {
+        var number_first = parseInt(document.forms["formCaculator"]["number_first"].value);
+        var number_second = parseInt(document.forms["formCaculator"]["number_second"].value);
+        var result = number_first * number_second;
+        document.getElementById('result').innerHTML = "Result Addition: "+result;
+    }
+    function division() {
+        var number_first = parseInt(document.forms["formCaculator"]["number_first"].value);
+        var number_second = parseInt(document.forms["formCaculator"]["number_second"].value);
+        var result = number_first / number_second;
+        document.getElementById('result').innerHTML = "Result Addition: "+result;
+    }
+</script>
 </body>
 </html>
